@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: wallet-tracker-public
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python DemkAaZa_PublicBot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: HELIUS_API_KEY
+        sync: false
+    healthCheckPath: /health
